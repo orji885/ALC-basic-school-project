@@ -1,0 +1,161 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title ADMIN REGISTRATION
+    link(rel='stylesheet', href='/css/animate.css')
+    style.
+      *{
+      box-sizing: border-box;
+      }
+      body{
+      background:#ba4f07;
+      color:#485e74;
+      line-height:1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding:1em;
+      }
+      .container{
+      max-width:1170px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:1em;
+      }
+      ul{
+      list-style: none;
+      padding:0;
+      }
+      .brand{
+      text-align: center;
+      }
+      .brand span{
+      color:#fff;
+      }
+      .wrapper{
+      box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+      }
+      .wrapper > *{
+      padding: 1em;
+      }
+      .company-info{
+      background:#c9e6ff;
+      }
+      .company-info h3, .company-info ul{
+      text-align: center;
+      margin:0 0 1rem 0;
+      }
+      .contact{
+      background:#f935ff;
+      }
+      /* FORM STYLES */
+      .contact form{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap:20px;
+      }
+      .contact form label{
+      display:block;
+      }
+      .contact form p{
+      margin:0;
+      }
+      .contact form .full{
+      grid-column: 1 / 3;
+      }
+      .contact form button, .contact form input, .contact form textarea{
+      width:100%;
+      padding:1em;
+      border:1px solid #c9e6ff;
+      }
+      .contact form button{
+      background:#c9e6ff;
+      border:0;
+      text-transform: uppercase;
+      }
+      .contact form button:hover,.contact form button:focus{
+      background:#92bde7;
+      color:#fff;
+      outline:0;
+      transition: background-color 2s ease-out;
+      }
+      /* LARGE SCREENS */
+      @media(min-width:700px){
+      .wrapper{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      }
+      .wrapper > *{
+      padding:2em;
+      }
+      .company-info h3, .company-info ul, .brand{
+      text-align: left;
+      }
+      /* The message box is shown when the user clicks on the password field */
+      #message {
+      display:none;
+      color: #000;
+      position: relative;
+      padding: 20px;
+      margin-top: 10px;
+      }
+      #message p {
+      padding: 10px 35px;
+      font-size: 12px;
+      }
+      /* Add a green text color and a checkmark when the requirements are right */
+      .valid {
+      color: green;
+      }
+      .valid:before {
+      position: relative;
+      left: -35px;
+      }
+      /* Add a red text color and an "x" icon when the requirements are wrong */
+      .invalid {
+      color: red;
+      }
+      .invalid:before {
+      position: relative;
+      left: -35px;
+      }
+  body
+    .container
+      h1.brand
+        span ADMIN
+        |  REGISTRATION
+      .wrapper.animated.bounceInLeft
+        .company-info
+          h3 WELCOME
+          ul
+            li
+              i.fa.fa-road
+              |  ALC-Google school project
+            li
+              i.fa.fa-phone
+              |  08161238087
+            li
+              i.fa.fa-envelope
+              |  orjilinda885@gmail.com
+        .contact
+          h3 REGISTER 
+          form(method='POST', action='/users/register', onsubmit='return validateForm();')
+            p
+              label Name
+              input(type='text', name='name')
+            p
+              label Username
+              input(type='text', name='username')
+            p
+              label Email Address
+              input(type='email', name='email')
+            p
+              label Password
+              input(type='password', name='password', title='Must contain at least one number and one uppercase and\
+              lowercase letter, and at least 4 or more characters')
+            p
+              label Confirm Password
+              input(type='password', name='password2')
+            p.full
+              button(type='submit', value='Submit') Submit

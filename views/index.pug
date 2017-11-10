@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title}
+  h1(style='color:red') Names of student saved in the school system
+  p You can edit/ update and delete the stundent name by clicking the preferred name below
+  ul.list-group
+    each article, i in articles
+      li.list-group-item
+        a(href="/articles/"+article._id)= article.title
