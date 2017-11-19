@@ -1,24 +1,25 @@
 {
-  "name": "school_project",
-  "version": "1.0.0",
-  "description": "a basic school system in which an admin creates,edits,deletes and updates student resources",
-  "main": "app.js",
-  "scripts": {
-      "start": "node app"
-  },
-  "author": "orji linda",
-  "license": "ISC",
-  "dependencies": {
-      "bcryptjs": "^*",
-      "body-parser": "^*",
-      "connect-flash": "^*",
-      "express": "^*",
-      "express-messages": "^*",
-      "express-session": "^*",
-      "express-validator": "^*",
-      "mongoose": "^*",
-      "passport": "^*",
-      "passport-local": "^*",
-      "pug": "^2.0.0-rc.4"
+    "name": "school_project",
+    "version": "1.0.0",
+    "description": "a basic school system in which an admin creates,edits,deletes and updates student resources",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "author": "orji linda",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^*",
+        "body-parser": "^*",
+        "connect-flash": "^*",
+        "express": "^*",
+        "express-messages": "^*",
+        "express-session": "^*",
+        "express-validator": "^*",
+        "mongoose": "^*",
+        "mysql": "^2.15.0",
+        "passport": "^*",
+        "passport-local": "^*",
+        "pug": "^2.0.0-rc.4"
     }
-  }
+}
